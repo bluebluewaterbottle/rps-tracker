@@ -9,13 +9,19 @@ function Update_Scoreboard () {
     OLED.writeStringNewLine("Ties:" + Ties)
 }
 input.onButtonPressed(Button.A, function () {
-	
+    PA += 1
+    rounds()
 })
+function rounds () {
+    Rounds += 1
+}
 input.onButtonPressed(Button.AB, function () {
-	
+    Ties += 1
+    rounds()
 })
 input.onButtonPressed(Button.B, function () {
-	
+    PB += 1
+    rounds()
 })
 input.onGesture(Gesture.Shake, function () {
     Reset()
