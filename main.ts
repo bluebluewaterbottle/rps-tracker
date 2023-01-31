@@ -10,6 +10,8 @@ function Update_Scoreboard () {
 }
 input.onButtonPressed(Button.A, function () {
     PA += 1
+    basic.showString("A")
+    Update_Scoreboard()
     rounds()
 })
 function rounds () {
@@ -17,10 +19,14 @@ function rounds () {
 }
 input.onButtonPressed(Button.AB, function () {
     Ties += 1
+    basic.showString("T")
+    Update_Scoreboard()
     rounds()
 })
 input.onButtonPressed(Button.B, function () {
     PB += 1
+    basic.showString("B")
+    Update_Scoreboard()
     rounds()
 })
 input.onGesture(Gesture.Shake, function () {
